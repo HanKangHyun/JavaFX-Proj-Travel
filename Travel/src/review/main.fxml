@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="review.ctrl">
+   <top><fx:include source="../include/header.fxml" /></top>
+   
+   <bottom><fx:include source="../include/footer.fxml" /></bottom>
+   
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="380.0" layoutY="58.0" mnemonicParsing="false" text="테마별" />
+            <Button layoutX="170.0" layoutY="58.0" mnemonicParsing="false" text="지역별" />
+            <Button fx:id="review" layoutX="586.0" layoutY="58.0" mnemonicParsing="false" onAction="#MoveReview" onMouseEntered="#hoverReview" text="리뷰" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
