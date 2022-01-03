@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="Homepage.HomeController">
+	<top><fx:include source="../Common/header.fxml" /></top>
+   <center>
+      <AnchorPane prefHeight="383.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="294.0" fitWidth="286.0" layoutX="247.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/사자.png" />
+               </image>
+            </ImageView>
+            <TextArea layoutX="247.0" layoutY="351.0" prefHeight="72.0" prefWidth="286.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom><fx:include source="../Common/footer.fxml" /></bottom>
+   
+</BorderPane>
