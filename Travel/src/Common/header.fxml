@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="85.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Common.PageController">
+   <children>
+      <TextField layoutX="477.0" layoutY="32.0" />
+      <Text layoutX="646.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="검색" />
+      <Text layoutX="713.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="로그인" />
+      <TextArea layoutX="73.0" prefHeight="86.0" prefWidth="162.0" style="-fx-background-color: gray;" />
+   </children>
+</AnchorPane>
