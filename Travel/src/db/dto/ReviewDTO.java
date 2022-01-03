@@ -1,54 +1,43 @@
 package db.dto;
 
 public class ReviewDTO {
-	private String email;
-	private String pwd;
-	private String name;
-	private String phone;
-	private String regdate;
+	private String review_name;
+	private String review_content;
+	private String review_summary;
+	private String review_image;
+	
 	public ReviewDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public ReviewDTO(String email, String pwd, String name, String phone, String regdate) {
+	public ReviewDTO(String review_name, String review_content, String review_summary, String review_image) {
 		super();
-		this.email = email;
-		this.pwd = pwd;
-		this.name = name;
-		this.phone = phone;
-		this.regdate = regdate;
+		this.review_name = review_name;
+		this.review_content = review_content;
+		this.review_summary = review_summary;
+		this.review_image = review_image;
 	}
-	public String getEmail() {
-		return email;
+	public String getReview_name() {
+		return review_name;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setReview_name(String review_name) {
+		this.review_name = review_name;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getReview_content() {
+		return review_content;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setReview_content(String review_content) {
+		this.review_content = review_content;
 	}
-	public String getName() {
-		return name;
+	public String getReview_summary() {
+		return review_summary;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setReview_summary(String review_summary) {
+		this.review_summary = review_summary;
 	}
-	public String getPhone() {
-		return phone;
+	public String getReview_image() {
+		return review_image;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setReview_image(String review_image) {
+		this.review_image = review_image;
 	}
-	public String getRegdate() {
-		return regdate;
-	}
-	public void setRegdate(String regdate) {
-		this.regdate = regdate;
-	}
-	
-	
-	
 }

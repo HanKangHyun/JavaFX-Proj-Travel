@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
 
 <BorderPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="review.ReviewCtrl">
    <top><fx:include source="../include/header.fxml" /></top>
@@ -18,66 +16,7 @@
             <Button layoutX="374.0" layoutY="35.0" mnemonicParsing="false" text="테마별" />
             <Button layoutX="169.0" layoutY="35.0" mnemonicParsing="false" text="지역별" />
             <Button fx:id="review" layoutX="586.0" layoutY="35.0" mnemonicParsing="false" onAction="#MoveReview" onMouseEntered="#hoverReview" text="리뷰" />
-            <Pane layoutX="20.0" layoutY="85.0" prefHeight="400.0" prefWidth="760.0" style="-fx-border-color: gray;">
-               <children>
-               	 <BorderPane onMouseClicked="#Move" prefHeight="100.0" prefWidth="760.0" style="-fx-border-color: gray;">
-                     <top>
-                        <Text fx:id="reviewTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="제목" BorderPane.alignment="CENTER_LEFT" />
-                     </top>
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이미지" wrappingWidth="36.0" BorderPane.alignment="CENTER" />
-                     </center>
-                     <bottom>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="한줄요약/기간" BorderPane.alignment="CENTER_LEFT" />
-                     </bottom>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </BorderPane>
-                  <BorderPane layoutY="100.0" onMouseClicked="#Move" prefHeight="100.0" prefWidth="760.0" style="-fx-border-color: gray;">
-                     <top>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="제목" BorderPane.alignment="CENTER_LEFT" />
-                     </top>
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이미지" wrappingWidth="36.0" BorderPane.alignment="CENTER" />
-                     </center>
-                     <bottom>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="한줄요약/기간" BorderPane.alignment="CENTER_LEFT" />
-                     </bottom>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </BorderPane>
-                  <BorderPane layoutY="200.0" prefHeight="100.0" prefWidth="760.0" style="-fx-border-color: gray;">
-                     <top>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="제목" BorderPane.alignment="CENTER_LEFT" />
-                     </top>
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이미지" wrappingWidth="36.0" BorderPane.alignment="CENTER" />
-                     </center>
-                     <bottom>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="한줄요약/기간" BorderPane.alignment="CENTER_LEFT" />
-                     </bottom>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </BorderPane>
-                  <BorderPane layoutY="300.0" prefHeight="100.0" prefWidth="760.0" style="-fx-border-color: gray;">
-                     <top>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="제목" BorderPane.alignment="CENTER_LEFT" />
-                     </top>
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="이미지" wrappingWidth="36.0" BorderPane.alignment="CENTER" />
-                     </center>
-                     <bottom>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="한줄요약/기간" BorderPane.alignment="CENTER_LEFT" />
-                     </bottom>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </BorderPane>
-               </children>
-            </Pane>
+            <VBox fx:id="vb" layoutX="20.0" layoutY="89.0" prefHeight="400.0" prefWidth="760.0" style="-fx-border-color: gray;" />
          </children>
       </AnchorPane>
    </center>
