@@ -1,8 +1,5 @@
 package Common;
 
-<<<<<<< HEAD
-public class PageController {
-=======
 import javafx.scene.Parent;
 
 public class PageController {
@@ -11,6 +8,5 @@ public class PageController {
 		this.form = form;
 		
 	}
->>>>>>> refs/heads/kanghyun
 
 }

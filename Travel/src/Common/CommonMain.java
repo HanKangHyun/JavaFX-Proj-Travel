@@ -1,10 +1,5 @@
 package Common;
 
-<<<<<<< HEAD
-public class CommonMain {
-
-=======
-import Homepage.HomeController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -30,5 +25,5 @@ public class CommonMain extends Application{
 		ctrler.setForm(root);
 		
 	}
->>>>>>> refs/heads/kanghyun
+
 }
