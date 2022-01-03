@@ -28,7 +28,7 @@ public class ctrl {
 			form = (Parent) loader.load();
 			Scene sc = new Scene(form);
 			
-			stage.setTitle("s");
+			stage.setTitle("리뷰");
 			stage.setScene(sc);
 			stage.show();
 			
