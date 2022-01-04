@@ -1,17 +1,20 @@
 package review;
 
-import java.io.IOException;
-
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class WriteReviewCtrl {
 	private Parent form;
 	private Stage stage;
-	private String picPath;
 	private IWriteReview iWriteReview;
+	@FXML private TextField reviewTitle;
+	@FXML private TextField reviewContent;
+	@FXML private TextField reviewSummary;
+	@FXML private TextArea txtArea;
 	
 	public WriteReviewCtrl() {
 		iWriteReview = new WriteReviewImpl();
@@ -24,12 +27,13 @@ public class WriteReviewCtrl {
 
 //	리뷰에 사진첨부
 	public void attachPicture() {
-		picPath = iWriteReview.attachPicture();
-		
+		iWriteReview.attachPicture(txtArea);
 	}
 	
+//	리뷰등록
 	public void registReview() {
-		System.out.println("등록");
+		iWriteReview.registReview(reviewTitle, reviewContent, reviewSummary, txtArea);
+		iWriteReview.pageBack(stage, form);
 	}
 	
 //	리뷰작성 취소

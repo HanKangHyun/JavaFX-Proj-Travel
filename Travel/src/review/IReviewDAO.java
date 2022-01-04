@@ -5,6 +5,6 @@ import java.util.ArrayList;
 import db.dto.ReviewDTO;
 
 public interface IReviewDAO {
-	//public ReviewDAO getInstance();
 	public ArrayList<ReviewDTO> select();
+	public void insertReview(ReviewDTO dto);
 }

@@ -21,12 +21,6 @@ public class ReviewDAOImpl implements IReviewDAO{
 			singleton = new ReviewDAO();
 		}
 	}
-//	public ReviewDAO getInstance() {
-//		if(singleton == null) {
-//			singleton = new ReviewDAO();
-//		}
-//		return singleton;
-//	}
 	
 	public ArrayList<ReviewDTO> select() {
 		Connection con = null;
@@ -40,7 +34,7 @@ public class ReviewDAOImpl implements IReviewDAO{
 			StringBuffer sql = new StringBuffer();
 			sql.append("SELECT * ");
 			sql.append("FROM review ");
-			//sql.append("LIMIT 0,4");
+			sql.append("ORDER BY review_image DESC");
 			pstmt = con.prepareStatement(sql.toString());
 			
 			rs = pstmt.executeQuery();
@@ -75,5 +69,35 @@ public class ReviewDAOImpl implements IReviewDAO{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void insertReview(ReviewDTO dto) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = DriverManager.getConnection("jdbc:mariadb://localhost/travel","kic12","kic12");
+			
+			StringBuffer sql = new StringBuffer();
+			sql.append("INSERT INTO review(review_name, review_content, review_summary, review_image) ");
+			sql.append("VALUES(?,?,?,?)");
+			
+			pstmt = con.prepareStatement(sql.toString());
+			
+			int index=1;
+			pstmt.setString(index++, dto.getReview_name());
+			pstmt.setString(index++, dto.getReview_content());
+			pstmt.setString(index++, dto.getReview_summary());
+			pstmt.setString(index,   dto.getReview_image());
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, null);
+		}
+		
 	}
 }

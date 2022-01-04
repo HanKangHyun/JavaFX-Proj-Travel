@@ -91,7 +91,7 @@ public class ReviewImpl implements IReview{
 			hb.setMargin(label2, new Insets(10));
 			hb.setMargin(label3, new Insets(10));
 			hb.setMargin(imgView, new Insets(10));
-			hb.getChildren().addAll(label, label2, imgView, label3);
+			hb.getChildren().addAll(label, imgView, label2, label3);
 			
 			vb.getChildren().add(hb);
 		}
