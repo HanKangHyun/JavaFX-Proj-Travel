@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -16,12 +17,16 @@
             <Button layoutX="374.0" layoutY="14.0" mnemonicParsing="false" text="테마별" />
             <Button layoutX="160.0" layoutY="14.0" mnemonicParsing="false" text="지역별" />
             <Button fx:id="review" layoutX="587.0" layoutY="14.0" mnemonicParsing="false" onAction="#MoveReview" text="리뷰" />
-            <VBox fx:id="vb" layoutX="20.0" layoutY="89.0" prefHeight="400.0" prefWidth="760.0" style="-fx-border-color: gray;" />
             <Button layoutX="64.0" layoutY="57.0" mnemonicParsing="false" text="지역 선택" />
             <Button layoutX="143.0" layoutY="57.0" mnemonicParsing="false" text="테마 선택" />
             <Button fx:id="writeReview" layoutX="289.0" layoutY="57.0" mnemonicParsing="false" onAction="#MoveWriteReview" text="리뷰작성" />
             <Button layoutX="627.0" layoutY="57.0" mnemonicParsing="false" text="최신순" />
             <Button layoutX="686.0" layoutY="57.0" mnemonicParsing="false" text="인기순" />
+            <ScrollPane layoutX="20.0" layoutY="112.0" prefHeight="400.0" prefWidth="760.0">
+               <content>
+                  <VBox fx:id="vb" prefHeight="400.0" prefWidth="760.0" style="-fx-border-color: gray;" />
+               </content>
+            </ScrollPane>
          </children>
       </AnchorPane>
    </center>
